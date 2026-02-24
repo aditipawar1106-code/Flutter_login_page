@@ -3,20 +3,21 @@ import '../core/widgets/gradient.dart';
 import 'forgot_password_page.dart';
 import 'admin_dashboard.dart';
 
-class ResetPasswordPage extends StatefulWidget {
+class ResetPasswordPage extends StatefulWidget
+{
   const ResetPasswordPage({super.key});
-
   @override
   State<ResetPasswordPage> createState() => _ResetPasswordPageState();
 }
 
-class _ResetPasswordPageState extends State<ResetPasswordPage> {
+class _ResetPasswordPageState extends State<ResetPasswordPage>
+{
   final TextEditingController currentController = TextEditingController();
   final TextEditingController newController = TextEditingController();
   final TextEditingController confirmController = TextEditingController();
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return Container(
       color: Colors.white,
       child: Scaffold(
@@ -128,7 +129,8 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
     );
   }
 
-  Widget buildInputField(String hint, TextEditingController controller) {
+  Widget buildInputField(String hint, TextEditingController controller)
+  {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(

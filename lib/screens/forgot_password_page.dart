@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../core/widgets/gradient.dart';
 import 'admin_dashboard.dart';
 
-class ForgotPasswordPage extends StatefulWidget {
+class ForgotPasswordPage extends StatefulWidget
+{
   const ForgotPasswordPage({super.key});
-
   @override
   State<ForgotPasswordPage> createState() => _ForgotPasswordPageState();
 }
@@ -15,10 +15,8 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   final TextEditingController otpController = TextEditingController();
   final TextEditingController newController = TextEditingController();
   final TextEditingController confirmController = TextEditingController();
-
   int timerSeconds = 30;
   Timer? _timer;
-
   void startTimer() {
     _timer?.cancel();
     timerSeconds = 30;
@@ -57,16 +55,10 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                 ),
               ),
               const SizedBox(height: 10),
-
-              // Mobile / Email
               buildInputField("Mobile Number or Email", contactController),
               const SizedBox(height: 16),
-
-              // Enter OTP
               buildInputField("Enter OTP", otpController),
               const SizedBox(height: 10),
-
-              // Send OTP button below OTP field
               Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -91,8 +83,6 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
               ),
 
               const SizedBox(height: 5),
-
-              // OTP timer text in black
               if (timerSeconds > 0)
                 Text(
                   "OTP expires in $timerSeconds seconds",
@@ -101,14 +91,10 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                 ),
 
               const SizedBox(height: 16),
-
-              // New password fields
               buildInputField("New Password", newController),
               const SizedBox(height: 16),
               buildInputField("Confirm New Password", confirmController),
               const SizedBox(height: 30),
-
-              // Reset Password button
               Center(
                 child: Container(
                   width: double.infinity,
@@ -155,8 +141,8 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
     );
   }
 
-  // Input field builder with light blue background
-  Widget buildInputField(String hint, TextEditingController controller) {
+  Widget buildInputField(String hint, TextEditingController controller)
+  {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
