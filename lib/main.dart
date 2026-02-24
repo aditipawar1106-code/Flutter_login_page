@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/login_page.dart';
+import 'screens/admin_dashboard.dart';
 
 void main()
 {
@@ -14,7 +14,8 @@ class GovernmentPortalApp extends StatelessWidget
   {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      title: 'Government Portal',
+      home: AdminDashboard(),
     );
   }
 }
